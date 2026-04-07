@@ -36,6 +36,18 @@ Agents investigate production-style incidents by querying logs, checking depende
 `-- sre_agents.py
 ```
 
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Python 3.10+ |
+| Data Validation | [Pydantic](https://docs.pydantic.dev/) v2 |
+| RL Interface | Custom `gym`-style `reset()` / `step()` loop |
+| Scenario Engine | `sre_scenarios.py` — hand-crafted incident definitions |
+| Environment | `sre_environment.py` — stateful simulation with evolving logs & metrics |
+| Grading | `sre_grading.py` — trajectory-based scoring functions |
+| Demo Agents | Rule-based `RunbookAgent` and random-baseline `RandomAgent` |
+
 ## Requirements
 
 - Python 3.10+
